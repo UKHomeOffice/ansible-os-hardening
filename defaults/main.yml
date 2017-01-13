@@ -9,7 +9,7 @@ os_auth_timeout: 60
 os_auth_allow_homeless: false
 os_auth_pam_passwdqc_enable: true
 os_auth_pam_passwdqc_options: 'min=disabled,disabled,24,16,12 passphrase=3 match=4 similar=deny'
-os_auth_pam_pwquality_options: 'rety=3 difok=5 minlen=12 ucredit=1 lcredit=1 ocredit=0 minclass=4 maxrepeat=2 maxclassrepeat=0 gecoscheck=1' # used in RHEL7
+os_auth_pam_pwquality_options: 'retry=3 difok=5 minlen=12 ucredit=1 lcredit=1 ocredit=0 minclass=4 maxrepeat=2 maxclassrepeat=0 gecoscheck=1' # used in RHEL7
 os_auth_root_ttys: [console, tty1, tty2, tty3, tty4, tty5, tty6]
 os_auth_uid_min: 1000
 os_auth_gid_min: 1000
