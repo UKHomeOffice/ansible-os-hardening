@@ -4,3 +4,4 @@
 
 - name: create hide-users
   template: src='51-hide-users.j2' dest='/usr/share/lightdm/lightdm.conf.d/51-hide-users.j2' owner=root group=root mode=0444
+  when: "{{ os_desktop_enable }}"
