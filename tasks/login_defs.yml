@@ -2,6 +2,10 @@
 - name: create login.defs
   template: src='login.defs.j2' dest='/etc/login.defs' owner=root group=root mode=0444
 
+- stat:
+    path: /usr/share/lightdm/lightdm.conf.d
+  register: lightdm_path
+
 - name: create hide-users
   template: src='51-hide-users.j2' dest='/usr/share/lightdm/lightdm.conf.d/51-hide-users.j2' owner=root group=root mode=0444
-  when: "{{ os_desktop_enable }}"
+  when: "(os_desktop_enable and lightdm_path.stat.isdir and lightdm_path.stat.isdir)"
