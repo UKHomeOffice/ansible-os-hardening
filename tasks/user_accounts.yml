@@ -11,8 +11,8 @@
   when: ansible_os_family == 'Debian'
 
 - name: set UID_MAX on other systems if no login.defs exist
-  set_fact: uid_max='499'
-  when: not uid_min
+  set_fact: uid_max='498'
+  when: ansible_os_family == 'RedHat'
 
 - name: get all system accounts
   command: awk -F'':'' '{ if ( $3 <= {{uid_max|quote}} ) print $1}' /etc/passwd removes=/etc/passwd 
