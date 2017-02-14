@@ -1,0 +1,9 @@
+---
+- name: Overrides for Network Manager
+  template: 
+    src: '10-network-manager.pkla.j2'
+    dest: '/etc/polkit-1/localauthority/50-local.d/10-network-manager.pkla'
+    owner: root
+    group: root
+    mode: 0644
+  when: ansible_os_family == 'Debian'

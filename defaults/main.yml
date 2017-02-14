@@ -150,3 +150,6 @@ blacklist_modules: ["cramfs", "freevxfs", "jffs2", "hfs", "hfsplus", "squashfs",
 greeter_show_manual_login: "true"
 greeter_hide_users: "true"
 allow_guest: "false"
+
+nm_override_identity: "unix-group:staff"
+nm_result_active: "auth_admin"
