@@ -17,7 +17,7 @@ provisioner:
   ansible_verbose: true
   ansible_diff: true
   hosts: all
-  roles_path: ../ansible-os-hardening/
+  roles_path: ../ansible-role-os-hardening/
   playbook: default.yml
   ansible_extra_flags:
     - "--skip-tags=sysctl"
